@@ -1,0 +1,20 @@
+{
+  "name": "postme",
+  "version": "0.0.1",
+  "description": "Mi primer PWA",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1 .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "PWA",
+    "pwa",
+    "PostMe"
+  ],
+  "author": "20183L101008@utcv.edu.mx",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
