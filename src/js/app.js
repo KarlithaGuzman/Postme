@@ -11,7 +11,8 @@ const showPostModal = () => {
   MODAL_POST.style.display = 'block';
   setTimeout(() => {
     MODAL_POST.style.transform = 'translateY(0)';
-  }, 1);
+  }, 1);22
+  
 };
 const closePostModal = () => {
   MAIN.style.display = 'block';
