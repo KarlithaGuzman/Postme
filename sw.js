@@ -12,29 +12,29 @@ const CACHE_FILES = [
 
 self.addEventListener('install', (event) => {
     //Nosotros deberiamos agregar al cache nuestros archivos
-    //console.info('[SW]: Adicionando nuestros archivos al cache...');
+    console.info('[SW]: Adicionando nuestros archivos al cache...');
 
-   //const wu = new Promise((resolve, reject) => {
-    //try{
-        //setTimeout(() => {
-            //const adicionandoMisArchivos = '';
-            //const adicionarVariablesDinamicas = '';
-            //console.warn('[SW]: Se instalo correctamente...');
-            //resolve();
-        //}, 1000); //1 segundo
+   const wu = new Promise((resolve, reject) => {
+    try{
+        setTimeout(() => {
+            const adicionandoMisArchivos = '';
+            const adicionarVariablesDinamicas = '';
+            console.warn('[SW]: Se instalo correctamente...');
+            resolve();
+        }, 1000); //1 segundo
 
-        //self.skipWaiting();
-    //} catch (error){
-        //reject(error.message);
-    //}
-   //})
-   //event.waitUntil(wu);
+        self.skipWaiting();
+    } catch (error){
+        reject(error.message);
+    }
+   })
+   event.waitUntil(wu);
 
    const guardandoCache = caches.open(CACHE_NAME)
    .then(cache => {
     console.log('---------------------------------');
     console.log(cache);
-    console.log('----------------------------------------';)
+    console.log('----------------------------------------');
    })
    self.skipWaiting();
 });
