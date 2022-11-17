@@ -32,15 +32,18 @@ self.addEventListener('install', (event) => {
 
    const guardandoCache = caches.open(CACHE_NAME)
    .then(cache => {
-    console.log('---------------------------------');
-    console.log(cache);
-    console.log('----------------------------------------');
+    return cache.addAll(CACHE_FILES);
+    //console.log('---------------------------------');
+    //console.log(cache);
+    //console.log('----------------------------------------');
    })
+   .catch(err => console.error(err.message));
    self.skipWaiting();
+   event.waitUntil(guardandoCache);
 });
 
 self.addEventListener('activate', (event) => {
-    //La documentacion nos indica eliminar todos los caches atneriores
+    //La documentacion nos indica eliminar todos los caches anteriores
     console.info('[SW]: Archivos exitosamente guardados...');
     //event.waitUntil(clients.cliam());
 });
