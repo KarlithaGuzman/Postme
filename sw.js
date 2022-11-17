@@ -5,6 +5,7 @@ const CACHE_FILES = [
     'https://code.getmdl.io/1.3.0/material.brown-orange.min.css',
     'https://code.getmdl.io/1.3.0/material.min.js',
     'https://unpqg.com/pwacompat',
+    'src/js/indexeddb.js',
     'src/css/app.css',
     'src/js/app.js',
     'index.html'
